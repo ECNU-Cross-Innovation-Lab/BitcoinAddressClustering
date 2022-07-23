@@ -4,4 +4,4 @@ Change address identification is one of the difficulties in bitcoin address clus
 ## How to Run the Code
 Run the code 
 
-`python train.py` 
+`python main.py` 
