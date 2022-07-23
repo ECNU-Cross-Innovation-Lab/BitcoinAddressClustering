@@ -5,3 +5,7 @@ Change address identification is one of the difficulties in bitcoin address clus
 Run the code 
 
 `python main.py` 
+
+## Data description
+
+The raw data and the preprocessed data (which can be run directly via `main.py` with the H7 method proposed in this paper) are stored in 'Raw_data' and 'Datasets' tags.
