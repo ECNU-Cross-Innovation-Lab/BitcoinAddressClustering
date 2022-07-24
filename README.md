@@ -1,11 +1,7 @@
 # Bitcoin Address Clustering
 Change address identification is one of the difficulties in bitcoin address clustering as an emerging social computing problem. Most of the current related research only applies to certain specific types of transactions and faces the problems of low recognition rate and high false positive rate. We innovatively propose a clustering method based on multi-conditional recognition of one-time change addresses and conduct experiments with on-chain bitcoin transaction data. The results show that the proposed method identifies at least 12.3\% more one-time change addresses than other heuristics. On top of the multi-input heuristic clustering method, the proposed method also improves the address clustering performance by 5.7\%, achieves optimal recognition results compared to similar methods, and significantly reduces the false positive rate of recognition results. This work provides the technical basis for anti-money laundering efforts based on entity identification.
 
-## How to Run the Code
-Run the code 
+## Data description and code running
 
-`python main.py` 
-
-## Data description
-
-The raw data and the preprocessed data (which can be run directly via `main.py` with the H7 method proposed in this paper) are stored in 'Raw_data' and 'Datasets' tags.
+Our dataset is divided into two parts, part 1 is mainly raw datasets downloaded from the high speed channel of Blockchair website. it contains 3 dataset files, blockchair_bitcoin_transactions_20220531.tsv, blockchair_bitcoin_inputs_20220531.tsv, blockchair_bitcoin_outputs_20220531.tsv. Part 2 is mainly the pre-processed datasets and the address information datasets obtained from the advanced API of the Blockchair website. It contains 4 files, namely transactions_data.csv, input_data.csv, output_data.csv, address_info.csv. Our public code also corresponds to these two parts, preprocessing.py is used to process raw datasets, and main.py is used to process datasets. main.py is the most core code in this study, including identifying zeroed addresses, address clustering, calculating address reduction rate, coverage rate, etc.
+It should be noted that many parts of the code file main.py can be run accelerated with multi-threading. We omit the multi-threaded accelerated code for the convenience of the reader's understanding. If you have any questions about how the code runs, you can contact us through the contact information in the documentation.
